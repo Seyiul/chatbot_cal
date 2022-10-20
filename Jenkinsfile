@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        sh './gradlew compileJava'
+        sh './gradlew.bat compileJava'
       }
     }
 
     stage('Unit test') {
       steps {
-        sh './gradlew test'
+        sh './gradlew.bat test'
       }
     }
 
     stage('Build') {
       steps {
-        sj './gradlew build'
+        sj './gradlew.bat build'
       }
     }
 
